@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Setting));
+            this.Element_Set = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.SaveSetting = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.SetArea_value = new System.Windows.Forms.TextBox();
+            this.SetArea = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.SetPShi_value = new System.Windows.Forms.TextBox();
+            this.SetPShi = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -49,35 +50,40 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.SetPAir_value = new System.Windows.Forms.TextBox();
+            this.SetPAir = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.SetPPho_value = new System.Windows.Forms.TextBox();
+            this.SetPPho = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.SetPOrg_value = new System.Windows.Forms.TextBox();
+            this.SetPOrg = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.SetPwa_value = new System.Windows.Forms.TextBox();
+            this.SetPwa = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // Element_Set
             // 
-            this.comboBox1.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1111",
-            "2222",
-            "3333"});
-            this.comboBox1.Location = new System.Drawing.Point(178, 61);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(103, 32);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.Text = "Sn";
+            this.Element_Set.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Element_Set.FormattingEnabled = true;
+            this.Element_Set.Items.AddRange(new object[] {
+            "Cd",
+            "Pb",
+            "As",
+            "Cr",
+            "Hg",
+            "Cu",
+            "Zn",
+            "Ni"});
+            this.Element_Set.Location = new System.Drawing.Point(178, 61);
+            this.Element_Set.Name = "Element_Set";
+            this.Element_Set.Size = new System.Drawing.Size(103, 32);
+            this.Element_Set.TabIndex = 6;
+            this.Element_Set.SelectedIndexChanged += new System.EventHandler(this.Element_Set_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -93,22 +99,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(334, 22);
+            this.label1.Location = new System.Drawing.Point(348, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 31);
+            this.label1.Size = new System.Drawing.Size(182, 31);
             this.label1.TabIndex = 4;
-            this.label1.Text = "XXX测量应用";
+            this.label1.Text = "参数查看与修改";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.SaveSetting);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.comboBox7);
+            this.groupBox1.Controls.Add(this.SetArea_value);
+            this.groupBox1.Controls.Add(this.SetArea);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.comboBox6);
+            this.groupBox1.Controls.Add(this.SetPShi_value);
+            this.groupBox1.Controls.Add(this.SetPShi);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.radioButton4);
@@ -118,17 +124,17 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.comboBox5);
+            this.groupBox1.Controls.Add(this.SetPAir_value);
+            this.groupBox1.Controls.Add(this.SetPAir);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.comboBox4);
+            this.groupBox1.Controls.Add(this.SetPPho_value);
+            this.groupBox1.Controls.Add(this.SetPPho);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.SetPOrg_value);
+            this.groupBox1.Controls.Add(this.SetPOrg);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.SetPwa_value);
+            this.groupBox1.Controls.Add(this.SetPwa);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.Location = new System.Drawing.Point(65, 126);
@@ -137,15 +143,17 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "输入部分参数";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button1
+            // SaveSetting
             // 
-            this.button1.Location = new System.Drawing.Point(642, 320);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 39);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "修改";
-            this.button1.UseVisualStyleBackColor = true;
+            this.SaveSetting.Location = new System.Drawing.Point(642, 320);
+            this.SaveSetting.Name = "SaveSetting";
+            this.SaveSetting.Size = new System.Drawing.Size(97, 39);
+            this.SaveSetting.TabIndex = 32;
+            this.SaveSetting.Text = "修改";
+            this.SaveSetting.UseVisualStyleBackColor = true;
+            this.SaveSetting.Click += new System.EventHandler(this.SaveSetting_Click);
             // 
             // label14
             // 
@@ -157,27 +165,29 @@
             this.label14.TabIndex = 31;
             this.label14.Text = "对应的值";
             // 
-            // textBox6
+            // SetArea_value
             // 
-            this.textBox6.Location = new System.Drawing.Point(275, 313);
-            this.textBox6.MaxLength = 6;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(97, 31);
-            this.textBox6.TabIndex = 30;
+            this.SetArea_value.Location = new System.Drawing.Point(275, 313);
+            this.SetArea_value.MaxLength = 6;
+            this.SetArea_value.Name = "SetArea_value";
+            this.SetArea_value.Size = new System.Drawing.Size(97, 31);
+            this.SetArea_value.TabIndex = 30;
+            this.SetArea_value.TextChanged += new System.EventHandler(this.SetArea_value_TextChanged);
             // 
-            // comboBox7
+            // SetArea
             // 
-            this.comboBox7.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
+            this.SetArea.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SetArea.FormattingEnabled = true;
+            this.SetArea.Items.AddRange(new object[] {
             "北京",
             "上海",
             "广州",
             "深圳"});
-            this.comboBox7.Location = new System.Drawing.Point(136, 313);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(110, 32);
-            this.comboBox7.TabIndex = 29;
+            this.SetArea.Location = new System.Drawing.Point(136, 313);
+            this.SetArea.Name = "SetArea";
+            this.SetArea.Size = new System.Drawing.Size(110, 32);
+            this.SetArea.TabIndex = 29;
+            this.SetArea.SelectedIndexChanged += new System.EventHandler(this.SetArea_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -198,28 +208,30 @@
             this.label12.TabIndex = 27;
             this.label12.Text = "带走部分的参数";
             // 
-            // textBox5
+            // SetPShi_value
             // 
-            this.textBox5.Location = new System.Drawing.Point(642, 73);
-            this.textBox5.MaxLength = 6;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(97, 31);
-            this.textBox5.TabIndex = 26;
+            this.SetPShi_value.Location = new System.Drawing.Point(642, 73);
+            this.SetPShi_value.MaxLength = 6;
+            this.SetPShi_value.Name = "SetPShi_value";
+            this.SetPShi_value.Size = new System.Drawing.Size(97, 31);
+            this.SetPShi_value.TabIndex = 26;
+            this.SetPShi_value.TextChanged += new System.EventHandler(this.SetPShi_value_TextChanged);
             // 
-            // comboBox6
+            // SetPShi
             // 
-            this.comboBox6.Items.AddRange(new object[] {
+            this.SetPShi.Items.AddRange(new object[] {
+            "5%",
             "10%",
             "25%",
             "50%",
             "75%",
             "90%",
             "95%"});
-            this.comboBox6.Location = new System.Drawing.Point(553, 73);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(69, 33);
-            this.comboBox6.TabIndex = 25;
-            this.comboBox6.Text = "10%";
+            this.SetPShi.Location = new System.Drawing.Point(553, 73);
+            this.SetPShi.Name = "SetPShi";
+            this.SetPShi.Size = new System.Drawing.Size(69, 33);
+            this.SetPShi.TabIndex = 25;
+            this.SetPShi.SelectedIndexChanged += new System.EventHandler(this.SetPShi_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -252,6 +264,7 @@
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "堆肥";
             this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -264,6 +277,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "猪粪";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -276,6 +290,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "牛粪";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -288,6 +303,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "鸡粪";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label9
             // 
@@ -319,28 +335,30 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "对应的值";
             // 
-            // textBox4
+            // SetPAir_value
             // 
-            this.textBox4.Location = new System.Drawing.Point(275, 217);
-            this.textBox4.MaxLength = 6;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(97, 31);
-            this.textBox4.TabIndex = 15;
+            this.SetPAir_value.Location = new System.Drawing.Point(275, 217);
+            this.SetPAir_value.MaxLength = 6;
+            this.SetPAir_value.Name = "SetPAir_value";
+            this.SetPAir_value.Size = new System.Drawing.Size(97, 31);
+            this.SetPAir_value.TabIndex = 15;
+            this.SetPAir_value.TextChanged += new System.EventHandler(this.SetPAir_value_TextChanged);
             // 
-            // comboBox5
+            // SetPAir
             // 
-            this.comboBox5.Items.AddRange(new object[] {
+            this.SetPAir.Items.AddRange(new object[] {
+            "5%",
             "10%",
             "25%",
             "50%",
             "75%",
             "90%",
             "95%"});
-            this.comboBox5.Location = new System.Drawing.Point(174, 217);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(72, 33);
-            this.comboBox5.TabIndex = 14;
-            this.comboBox5.Text = "10%";
+            this.SetPAir.Location = new System.Drawing.Point(174, 217);
+            this.SetPAir.Name = "SetPAir";
+            this.SetPAir.Size = new System.Drawing.Size(72, 33);
+            this.SetPAir.TabIndex = 14;
+            this.SetPAir.SelectedIndexChanged += new System.EventHandler(this.SetPAir_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -352,28 +370,30 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "大气沉降";
             // 
-            // textBox3
+            // SetPPho_value
             // 
-            this.textBox3.Location = new System.Drawing.Point(275, 171);
-            this.textBox3.MaxLength = 6;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(97, 31);
-            this.textBox3.TabIndex = 12;
+            this.SetPPho_value.Location = new System.Drawing.Point(275, 171);
+            this.SetPPho_value.MaxLength = 6;
+            this.SetPPho_value.Name = "SetPPho_value";
+            this.SetPPho_value.Size = new System.Drawing.Size(97, 31);
+            this.SetPPho_value.TabIndex = 12;
+            this.SetPPho_value.TextChanged += new System.EventHandler(this.SetPPho_value_TextChanged);
             // 
-            // comboBox4
+            // SetPPho
             // 
-            this.comboBox4.Items.AddRange(new object[] {
+            this.SetPPho.Items.AddRange(new object[] {
+            "5%",
             "10%",
             "25%",
             "50%",
             "75%",
             "90%",
             "95%"});
-            this.comboBox4.Location = new System.Drawing.Point(174, 171);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(72, 33);
-            this.comboBox4.TabIndex = 11;
-            this.comboBox4.Text = "10%";
+            this.SetPPho.Location = new System.Drawing.Point(174, 171);
+            this.SetPPho.Name = "SetPPho";
+            this.SetPPho.Size = new System.Drawing.Size(72, 33);
+            this.SetPPho.TabIndex = 11;
+            this.SetPPho.SelectedIndexChanged += new System.EventHandler(this.SetPPho_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -385,28 +405,30 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "磷肥的比例";
             // 
-            // textBox2
+            // SetPOrg_value
             // 
-            this.textBox2.Location = new System.Drawing.Point(275, 120);
-            this.textBox2.MaxLength = 6;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(97, 31);
-            this.textBox2.TabIndex = 9;
+            this.SetPOrg_value.Location = new System.Drawing.Point(275, 120);
+            this.SetPOrg_value.MaxLength = 6;
+            this.SetPOrg_value.Name = "SetPOrg_value";
+            this.SetPOrg_value.Size = new System.Drawing.Size(97, 31);
+            this.SetPOrg_value.TabIndex = 9;
+            this.SetPOrg_value.TextChanged += new System.EventHandler(this.SetPOrg_value_TextChanged);
             // 
-            // comboBox3
+            // SetPOrg
             // 
-            this.comboBox3.Items.AddRange(new object[] {
+            this.SetPOrg.Items.AddRange(new object[] {
+            "5%",
             "10%",
             "25%",
             "50%",
             "75%",
             "90%",
             "95%"});
-            this.comboBox3.Location = new System.Drawing.Point(174, 120);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(72, 33);
-            this.comboBox3.TabIndex = 8;
-            this.comboBox3.Text = "10%";
+            this.SetPOrg.Location = new System.Drawing.Point(174, 120);
+            this.SetPOrg.Name = "SetPOrg";
+            this.SetPOrg.Size = new System.Drawing.Size(72, 33);
+            this.SetPOrg.TabIndex = 8;
+            this.SetPOrg.SelectedIndexChanged += new System.EventHandler(this.SetPOrg_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -416,30 +438,32 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 25);
             this.label4.TabIndex = 7;
-            this.label4.Text = "商品肥的比例";
+            this.label4.Text = "有机肥的比例";
             // 
-            // textBox1
+            // SetPwa_value
             // 
-            this.textBox1.Location = new System.Drawing.Point(275, 74);
-            this.textBox1.MaxLength = 6;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(97, 31);
-            this.textBox1.TabIndex = 6;
+            this.SetPwa_value.Location = new System.Drawing.Point(275, 74);
+            this.SetPwa_value.MaxLength = 6;
+            this.SetPwa_value.Name = "SetPwa_value";
+            this.SetPwa_value.Size = new System.Drawing.Size(97, 31);
+            this.SetPwa_value.TabIndex = 6;
+            this.SetPwa_value.TextChanged += new System.EventHandler(this.SetPwa_value_TextChanged);
             // 
-            // comboBox2
+            // SetPwa
             // 
-            this.comboBox2.Items.AddRange(new object[] {
+            this.SetPwa.Items.AddRange(new object[] {
+            "5%",
             "10%",
             "25%",
             "50%",
             "75%",
             "90%",
             "95%"});
-            this.comboBox2.Location = new System.Drawing.Point(174, 74);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(72, 33);
-            this.comboBox2.TabIndex = 5;
-            this.comboBox2.Text = "10%";
+            this.SetPwa.Location = new System.Drawing.Point(174, 74);
+            this.SetPwa.Name = "SetPwa";
+            this.SetPwa.Size = new System.Drawing.Size(72, 33);
+            this.SetPwa.TabIndex = 5;
+            this.SetPwa.SelectedIndexChanged += new System.EventHandler(this.SetPwa_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -469,12 +493,13 @@
             this.ClientSize = new System.Drawing.Size(914, 591);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Element_Set);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Setting";
-            this.Text = "Setting";
-            this.Load += new System.EventHandler(this.Setting_Load);
+            this.Text = "Administer";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -484,24 +509,24 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Element_Set;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.TextBox SetPAir_value;
+        private System.Windows.Forms.ComboBox SetPAir;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.TextBox SetPPho_value;
+        private System.Windows.Forms.ComboBox SetPPho;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox SetPOrg_value;
+        private System.Windows.Forms.ComboBox SetPOrg;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox SetPwa_value;
+        private System.Windows.Forms.ComboBox SetPwa;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
@@ -511,12 +536,12 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.TextBox SetPShi_value;
+        private System.Windows.Forms.ComboBox SetPShi;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox SetArea_value;
+        private System.Windows.Forms.ComboBox SetArea;
+        private System.Windows.Forms.Button SaveSetting;
         private System.Windows.Forms.Button button2;
     }
 }
